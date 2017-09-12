@@ -20,12 +20,15 @@
                 function(data) {
                     $("#collectionSearchResults").html("");
                     $.each(data, function(index,value){
-                        $("#collectionSearchResults").append("<div class='result'>"+value.label+"</div>");
+                        $("#collectionSearchResults").append("<div class='collectionSearchResult'>"+value.label+"</div>");
                     });
                     $("#collectionSearchResults").show();
                     console.log(data);
                 }
             );
+        });
+        $(document).on("click",".collectionSearchResult", function() {
+           console.log($(this));
         });
     });
 </script>
