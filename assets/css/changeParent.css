@@ -1,0 +1,18 @@
+/* line 1, ../sass/changeParent.scss */
+#collectionSearchResults {
+  border: 1px solid gray;
+  background: white;
+  width: 569px;
+  margin-top: 0;
+  position: absolute;
+  z-index: 5000;
+  box-shadow: 0px 4px 8px #ccc;
+}
+/* line 10, ../sass/changeParent.scss */
+#collectionSearchResults div {
+  padding: 4px;
+}
+/* line 13, ../sass/changeParent.scss */
+#collectionSearchResults div:hover {
+  background: lightgray;
+}

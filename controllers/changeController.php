@@ -36,7 +36,17 @@
                 $parent = $_POST["parent_id"];
                 $vt_collection = new ca_collections($vn_id);
                 $vt_collection->setMode(ACCESS_WRITE);
-                $vt_collection->set
+                $vt_collection->set("ca_collections.parent_id", $parent);
+                $vt_collection->update();
+                $va_errors = $vt_collection->getErrors();
+                if(count($va_errors)>0) {
+                    var_dump($vt_collection->getErrors());
+                    die();
+                } else {
+                    $this->view->setVar('id', $vn_id);
+                    $this->view->setVar('parent', $parent);
+                    $this->render('changed_collection_parent_html.php');
+                }
             }
 
         }
