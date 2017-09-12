@@ -20,7 +20,6 @@
             }
         }
 
-
         # -------------------------------------------------------
         public function collection() {
             $vn_id = $this->request->getParameter("id",pInteger);
@@ -28,6 +27,7 @@
                 //$this->view->setVar('folders_contents', $folders_contents);
 
                 $this->view->setVar('id', $vn_id);
+                $this->view->setVar('collection_parent_type', $this->opo_config->get('collection_parent_type'));
                 $this->render('change_collection_parent_html.php');
             } else {
                 if ($_POST["record_id"] != $vn_id) {
