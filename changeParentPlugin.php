@@ -60,7 +60,7 @@ class changeParentPlugin extends BaseApplicationPlugin
 		$vn_code = $t_item->getTypeCode();
 
 		if (($vs_table_name == "ca_collections")&& (in_array($vn_code,$this->opo_config->get("collection_types")))) {
-			$vs_archeologyBoxes_url = caNavUrl($this->getRequest(), "changeParent", "change", "Index", array("id"=>$vn_item_id));
+			$vs_archeologyBoxes_url = caNavUrl($this->getRequest(), "changeParent", "change", "collection", array("id"=>$vn_item_id));
 
             $vs_buf = "<div style=\"text-align:center;width:100%;margin-top:10px;\">"
                 . "<a href=\"" . $vs_archeologyBoxes_url . "\" class='put-in-box-button'>"
