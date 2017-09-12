@@ -39,11 +39,10 @@ class changeParentPlugin extends BaseApplicationPlugin
 	/**
 	 * Insert into ObjectEditor info (side bar)
 	 */
-	public function hookAppendToEditorInspector(array $va_params = array())
-	{
-        MetaTagManager::addLink('stylesheet', __CA_URL_ROOT__."/app/plugins/archeologyBoxes/assets/css/archeologyBoxes.css",'text/css');
+	public function hookAppendToEditorInspector(array $va_params = array()) {
+        MetaTagManager::addLink('stylesheet', __CA_URL_ROOT__."/app/plugins/changeParent/assets/css/changeParent.css",'text/css');
 
-		$t_item = $va_params["t_item"];
+        $t_item = $va_params["t_item"];
 
 		// basic zero-level error detection
 		if (!isset($t_item)) return false;
@@ -71,7 +70,6 @@ class changeParentPlugin extends BaseApplicationPlugin
 
 		$va_params["caEditorInspectorAppend"] = $vs_buf;
 		return $va_params;
-
 	}
 
 	# -------------------------------------------------------
