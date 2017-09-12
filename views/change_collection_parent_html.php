@@ -22,7 +22,9 @@
                     $("#collectionSearchResults").html("");
                     $.each(data, function(index,value){
                         console.log(value);
-                        $("#collectionSearchResults").append("<div class='collectionSearchResult' data-id='"+value.id+"' data-label=\""+value.label+"\">"+value.label+"</div>");
+                        if(value.id) {
+                            $("#collectionSearchResults").append("<div class='collectionSearchResult' data-id='"+value.id+"' data-label=\""+value.label+"\">"+value.label+"</div>");
+                        }
                     });
                     $("#collectionSearchResults").show();
                     console.log(data);

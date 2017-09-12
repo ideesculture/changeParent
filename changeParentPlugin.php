@@ -64,7 +64,7 @@ class changeParentPlugin extends BaseApplicationPlugin
 
             $vs_buf = "<div style=\"text-align:center;width:100%;margin-top:10px;\">"
                 . "<a href=\"" . $vs_archeologyBoxes_url . "\" class='put-in-box-button'>"
-                . "Rattacher fiche OA"
+                . $this->opo_config->get('button_text')
                 . "</a></div>";
 
 		}
