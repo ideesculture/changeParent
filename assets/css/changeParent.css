@@ -1,4 +1,16 @@
 /* line 1, ../sass/changeParent.scss */
+.put-in-box-button {
+  text-align: center;
+  padding: 6px 20px;
+  margin: -6px 0 8px;
+  background: gray;
+  color: white !important;
+  border-radius: 4px;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+/* line 12, ../sass/changeParent.scss */
 #collectionSearchResults {
   border: 1px solid gray;
   background: white;
@@ -8,11 +20,11 @@
   z-index: 5000;
   box-shadow: 0px 4px 8px #ccc;
 }
-/* line 10, ../sass/changeParent.scss */
+/* line 21, ../sass/changeParent.scss */
 #collectionSearchResults div {
   padding: 4px;
 }
-/* line 13, ../sass/changeParent.scss */
+/* line 24, ../sass/changeParent.scss */
 #collectionSearchResults div:hover {
   background: lightgray;
 }
