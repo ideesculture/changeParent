@@ -23,8 +23,21 @@
 
         # -------------------------------------------------------
         public function collection() {
-            //$this->view->setVar('folders_contents', $folders_contents);
+            $vn_id = $this->request->getParameter("id",pInteger);
+            if(!isset($_POST["record_id"])) {
+                //$this->view->setVar('folders_contents', $folders_contents);
 
-            $this->render('change_collection_parent_html.php');
+                $this->view->setVar('id', $vn_id);
+                $this->render('change_collection_parent_html.php');
+            } else {
+                if ($_POST["record_id"] != $vn_id) {
+                    die("<b>error</b> Parity checked failed.");
+                }
+                $parent = $_POST["parent_id"];
+                $vt_collection = new ca_collections($vn_id);
+                $vt_collection->setMode(ACCESS_WRITE);
+                $vt_collection->set
+            }
+
         }
     }
